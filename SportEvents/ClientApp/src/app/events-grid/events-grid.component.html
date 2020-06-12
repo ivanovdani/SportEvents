@@ -21,10 +21,13 @@
       <td [attr.contenteditable]="editableRow == i"
           (blur)="changeField(i, 'name', $event)">{{ event.name }}</td>
       <td [attr.contenteditable]="editableRow == i"
+          (click)="!editOn && logOdds(event,'oddsForFirstTeam', $event)"
           (blur)="changeField(i, 'oddsForFirstTeam', $event)">{{ event.oddsForFirstTeam | number:'1.2' }}</td>
       <td [attr.contenteditable]="editableRow == i"
+          (click)="!editOn && logOdds(event,'oddsForDraw', $event)"
           (blur)="changeField(i, 'oddsForDraw', $event)">{{ event.oddsForDraw | number:'1.2'}}</td>
       <td [attr.contenteditable]="editableRow == i"
+          (click)="!editOn && logOdds(event,'oddsForSecondTeam', $event)"
           (blur)="changeField(i, 'oddsForSecondTeam', $event)">{{ event.oddsForSecondTeam | number:'1.2'}}</td>
       <td [attr.contenteditable]="editableRow == i"
           (blur)="changeField(i, 'eventStartDate', $event)">

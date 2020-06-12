@@ -32,6 +32,10 @@ export class EventsGridComponent {
     return moment.utc(date).local().format('YYYY-MM-DD HH:mm:ss')
   }
 
+  logOdds(sportEvent: SportEvent, oddType: string, event: any) {
+    console.log(`${sportEvent.id}, ${oddType}, ${sportEvent[oddType]}`);
+  }
+
   toggleMode() {
     this.editOn = !this.editOn;
     this.modeName = this.editOn ? "Preview mode" : "Edit mode";
