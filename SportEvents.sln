@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportEvents", "SportEvents\SportEvents.csproj", "{B144DF05-35E7-4D8F-BF9F-9E54FA3A503D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{58997502-32CA-4DC0-A2FC-B6CC2408530D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{F547F622-91D4-46A6-9AF7-78D0C2F322AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B144DF05-35E7-4D8F-BF9F-9E54FA3A503D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B144DF05-35E7-4D8F-BF9F-9E54FA3A503D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B144DF05-35E7-4D8F-BF9F-9E54FA3A503D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B144DF05-35E7-4D8F-BF9F-9E54FA3A503D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58997502-32CA-4DC0-A2FC-B6CC2408530D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58997502-32CA-4DC0-A2FC-B6CC2408530D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58997502-32CA-4DC0-A2FC-B6CC2408530D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58997502-32CA-4DC0-A2FC-B6CC2408530D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F547F622-91D4-46A6-9AF7-78D0C2F322AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F547F622-91D4-46A6-9AF7-78D0C2F322AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F547F622-91D4-46A6-9AF7-78D0C2F322AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F547F622-91D4-46A6-9AF7-78D0C2F322AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86898848-2C78-4810-A0BC-0AD998C392AF}
+	EndGlobalSection
+EndGlobal

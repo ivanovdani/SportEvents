@@ -1,0 +1,47 @@
+<h1 id="tableLabel">Sport Events</h1>
+<button id="mode_btn" class="btn btn-primary float-right" (click)="toggleMode()">{{modeName}}</button>
+
+<p *ngIf="!sportEvents"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="sportEvents">
+  <thead>
+    <tr>
+      <th *ngIf="editOn">Id</th>
+      <th>Name</th>
+      <th>OddsForFirstTeam</th>
+      <th>OddsForDraw</th>
+      <th>OddsForSecondTeam</th>
+      <th>EventStartDate</th>
+      <th class="text-center" *ngIf="editOn" colspan="2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of sportEvents; index as i" [class.passed-event]="isPassedDate(event.eventStartDate)">
+      <td *ngIf="editOn">{{ event.id }}</td>
+      <td [attr.contenteditable]="editableRow == i"
+          (blur)="changeField(i, 'name', $event)">{{ event.name }}</td>
+      <td [attr.contenteditable]="editableRow == i"
+          (blur)="changeField(i, 'oddsForFirstTeam', $event)">{{ event.oddsForFirstTeam | number:'1.2' }}</td>
+      <td [attr.contenteditable]="editableRow == i"
+          (blur)="changeField(i, 'oddsForDraw', $event)">{{ event.oddsForDraw | number:'1.2'}}</td>
+      <td [attr.contenteditable]="editableRow == i"
+          (blur)="changeField(i, 'oddsForSecondTeam', $event)">{{ event.oddsForSecondTeam | number:'1.2'}}</td>
+      <td [attr.contenteditable]="editableRow == i"
+          (blur)="changeField(i, 'eventStartDate', $event)">
+        {{ getLocalDate(event.eventStartDate)}}
+      </td>
+
+      <td *ngIf="editOn">
+        <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+      </td>
+      <td *ngIf="editOn && editableRow != i;" contenteditable="false">
+        <button class="btn btn-secondary" (click)="edit(i)">Edit</button>
+      </td>
+      <td *ngIf="editOn && editableRow == i;" contenteditable="false">
+        <button class="btn btn-secondary" (click)="save(i)">Save</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-secondary" (click)="add()">Add New Event</button>
+
